@@ -1,7 +1,7 @@
 const mongoose = require ("mongoose");
 
 //initializing the schema
-const mensSchema = new mongoose.Schema({
+const menSchema = new mongoose.Schema({
     ranking : {
         type: Number, //key value pair
         required: true, //mandate request
@@ -38,7 +38,7 @@ const mensSchema = new mongoose.Schema({
     },
 })
 //we are creating a new collection
-const MensRanking = new mongoose.model("MensRanking", mensSchema)
+const MensRanking = new mongoose.model("MensRanking", menSchema)
 
 //exporting the schema to use it every where
 module.exports = MensRanking;
