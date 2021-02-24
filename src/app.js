@@ -26,10 +26,24 @@ app.post("/mens", async (req, res) => {
 
 //haldling get request
 
-app.get("/mens", async (req, res) => {
+app.get("/mens/:id", async (req, res) => {
     try {
-        const getMens = await MensRanking.find({});
-        res.send(getMens);
+        const _id = req.params.id;
+        const getMen = await MensRanking.findById({_id:_id}); //{_id:_id} this is called destructuring, hence using one _id
+        res.send(getMen);
+    }catch(e){
+        res.status(400).send(e);
+    }
+})
+
+//handling patch request
+app.patch("/mens/:id", async (req, res) => {
+    try {
+        const _id = req.params.id;
+        const getMen = await MensRanking.findByIdAndUpdate(_id, req.body, {
+            new:true //to get the updated data in the postman
+        })
+        res.send(getMen);
     }catch(e){
         res.status(400).send(e);
     }
