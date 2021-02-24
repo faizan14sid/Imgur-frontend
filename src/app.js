@@ -1,8 +1,7 @@
 const express = require("express");
-const dotenv = require("dotenv");
 require("../src/db/conn"); //calling the connection file from the main src file
 
-//importing the schems model
+//importing the schema model
 const MensRanking = require("../src/models/mens");
 
 
@@ -14,17 +13,27 @@ const port = process.env.PORT || 8001;
 app.use (express.json());
 //haldling post request
 
-app.post("./mens", async (req, res) => {
+app.post("/mens", async (req, res) => {
     try{
         const addingMensRecords = new MensRanking(req.body)
         console.log(req.body);
-        addingMensRecords.save();
+        const insertMens = await addingMensRecords.save(); //this method is to return the promise
+        res.status(100).send(insertMens); //used status propety to change the status code. 
     }catch (e){
-        res.send(e);
-    }
+        res.status(400).send(e);
+    }   
 })
 
+//haldling get request
 
+app.get("/mens", async (req, res) => {
+    try {
+        const getMens = await MensRanking.find({});
+        res.send(getMens);
+    }catch(e){
+        res.status(400).send(e);
+    }
+})
 
 //first route to check if the get request is working. 
 // app.get("/", async (req,res) => {

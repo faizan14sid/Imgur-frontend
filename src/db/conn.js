@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-mongoose.connect("mongodb://localhost:27017/cricket", {
+mongoose.connect("mongodb://localhost:27017/Mens_ODI_Ranking", {
     
 // to get rid off the deprecatipon warnings
     useCreateIndex : true,
