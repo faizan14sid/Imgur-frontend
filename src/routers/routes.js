@@ -1,19 +1,10 @@
 const express = require("express");
-require("../src/db/conn"); //calling the connection file from the main src file
-
-//importing the schema model
-const MensRanking = require("../src/models/mens");
+const router = new express.Router();
 
 
-const app = express();
-const port = process.env.PORT || 8001;
 
-//middleware
-//Express doesn’t handle reading data from the <form> element on it’s own. We have to add another package called body-parser to gain this functionality.
-app.use (express.json());
-//haldling post request
-
-app.post("/mens", async (req, res) => {
+//handling post request
+router.post("/mens", async (req, res) => {
     try{
         const addingMensRecords = new MensRanking(req.body)
         console.log(req.body);
@@ -26,9 +17,9 @@ app.post("/mens", async (req, res) => {
 
 //handling get request
 
-app.get("/mens", async (req, res) => {
+router.get("/mens", async (req, res) => {
     try{
-        const getMens = await MensRanking.find({}).sort({"ranking":1}); //sort the data by the rank
+        const getMens = await MensRanking.find({}).sort({"ranking":1}); //sort the data by the ranking
         res.send(getMens);
     }catch(e){
         res.status(400).send(e);
@@ -37,7 +28,7 @@ app.get("/mens", async (req, res) => {
 
 //haldling get request of the individual
 
-app.get("/mens/:id", async (req, res) => {
+router.get("/mens/:id", async (req, res) => {
     try {
         const _id = req.params.id;
         const getMen = await MensRanking.findById({_id:_id}); //{_id:_id} this is called destructuring, hence using one _id
@@ -48,7 +39,7 @@ app.get("/mens/:id", async (req, res) => {
 })
 
 //handling patch request
-app.patch("/mens/:id", async (req, res) => {
+router.patch("/mens/:id", async (req, res) => {
     try {
         const _id = req.params.id;
         const getMen = await MensRanking.findByIdAndUpdate(_id, req.body, {
@@ -61,7 +52,7 @@ app.patch("/mens/:id", async (req, res) => {
 })
 
 //handling delete request of the individual by ID
-app.delete("/mens/:id", async (req, res) => {
+router.delete("/mens/:id", async (req, res) => {
     try {
         const _id = req.params.id;
         const getMen = await MensRanking.findByIdAndDelete(_id);
@@ -70,13 +61,5 @@ app.delete("/mens/:id", async (req, res) => {
         res.status(500).send(e);//error code we have set as 500 because the server errors starts from 500
     }
 })
-//first route to check if the get request is working. 
-// app.get("/", async (req,res) => {
-//     res.send("Hello world!!!")
-// })
 
-//check app is listening to the port(successful)
-
-app.listen(port, () => {
-    console.log('The connection is live at port number. 8001')
-})
+module.exports = router;
