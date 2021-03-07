@@ -1,0 +1,43 @@
+ .login {
+        background-color: cornsilk;
+        border: 1px solid #42464b;
+        border-radius: 6px;
+        height: 257px;
+        margin: 20px auto 20px;
+        width: 298px;
+        justify-content: center;
+      }
+      .signup {
+        background-color: cornsilk;
+        border: 1px solid #42464b;
+        border-radius: 6px;
+        height: 300px;
+        margin: 20px auto 20px;
+        width: 300px;
+        justify-content: center;
+      }
+      .form-group {
+        
+        border-radius: 6px 6px 0 0;
+        box-sizing: border-box;
+        color: brown;
+        display: block;
+        height: 43px;
+        font: 600 14px/1 'Open Sans', sans-serif;
+        padding-top: 14px;
+        margin: 0;
+        text-align: center;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.2), 0 1px 0 #fff;
+      }
+      .form-control{
+          justify-content: center;
+          margin: 10px;
+      }
+      .btnSignin{
+          background-color: cadetblue;
+      }
+      .btnSignup{
+          background-color: cadetblue;
+          margin-top: 15px;
+      }
+      

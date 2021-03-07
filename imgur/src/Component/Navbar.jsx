@@ -12,18 +12,18 @@ class Navbar extends React.Component{
          return(
              <BrowserRouter>
              <div>
+              <Link to="/">IMGUR</Link>
             <ul>
-            <li><Link to="/"><Imgur/></Link></li>
-            <li><Link to="/search"><Search/></Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/sign-up">Signup</Link></li>
+            <li><Link to="/search">SEARCH</Link></li>
+            <li><Link to="/login">LOGIN</Link></li>
+            <li><Link to="/sign-up">SIGNUP</Link></li>
           </ul>
           </div>
           <Switch>
-        <Route exact path="/" component={Imgur}/>
-        <Route exact path="/search" component={Search}/>
-        <Route exact path="/login" component={Login}/>
-        <Route exact path="/signup" component={Signup}/>
+        <Route path="/" exact component={Imgur}/>
+        <Route path="/search" exact component={Search}/>
+        <Route path="/login" exact component={Login}/>
+        <Route path="/sign-up" exact component={Signup}/>
         
       </Switch>
           </BrowserRouter>
