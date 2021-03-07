@@ -13,11 +13,10 @@ class Index extends Component {
       <App/>
 
     </div>
-  )
+  );
 }};
 ReactDOM.render(<BrowserRouter><App/></BrowserRouter>
-,
-  document.getElementById('root')
+,document.getElementById('root')
 );
 
 export default Index;

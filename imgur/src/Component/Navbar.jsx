@@ -5,15 +5,16 @@ import Search from './Search';
 import Login from './Login';
 import Signup from './Signup';
 import {BrowserRouter, Link,Route,Switch } from 'react-router-dom';
-
+import Upload from './Upload';
  
 class Navbar extends React.Component{
      render(){
          return(
              <BrowserRouter>
-             <div>
+               <div>
               <Link to="/">IMGUR</Link>
             <ul>
+            <li><Link to="/uploadImage">UPLOAD</Link></li>
             <li><Link to="/search">SEARCH</Link></li>
             <li><Link to="/login">LOGIN</Link></li>
             <li><Link to="/sign-up">SIGNUP</Link></li>
@@ -21,6 +22,7 @@ class Navbar extends React.Component{
           </div>
           <Switch>
         <Route path="/" exact component={Imgur}/>
+        <Route path="/uploadImage" exact component={Upload}/>
         <Route path="/search" exact component={Search}/>
         <Route path="/login" exact component={Login}/>
         <Route path="/sign-up" exact component={Signup}/>
