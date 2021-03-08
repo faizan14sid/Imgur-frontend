@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react';
+import './component.css'
 
-function Upload(){
+function Uploads(){
 
         const [selectedImages, setSelectedImages] = useState([])
         const imageHandleChange = (e) => {
@@ -8,14 +9,14 @@ function Upload(){
                 const fileArray= Array.from(e.target.files).map((file)=>URL.createObjectURL(file))
 
                 setSelectedImages((prevImages)=>prevImages.concat(fileArray))
-                Array.from(e.target.file).map(
+                Array.from(e.target.files).map(
                 (file)=>URL.revokeObjectURL(file))
             }
 
         }
         const renderPhotos= (source)=>{
             return source.map((photo)=>{
-            return <img src={photo} alt={""} key={photo}/>
+            return <img src={photo} alt={''} key={photo}/>
             })
         };
         return (
@@ -32,11 +33,10 @@ function Upload(){
                 </div>
                 <div className="Result">
                     {renderPhotos(selectedImages)}
-
-                </div>
+                          </div>
             </div>
             </div>
             
         );
     }
-export default Upload;
+export default Uploads;

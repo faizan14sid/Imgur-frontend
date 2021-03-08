@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+import Cards from './Card'
+import './component.css';
 
+const Imgur = () => {
+    return (
+        <div>
+            <Cards/>
+        </div>
+    )
+}
 
-
-class Imgur extends React.Component {
-   render(){
-     return(
-      <h1><Imgur/></h1>
-     )
-  }}
-  export default Imgur;
+export default Imgur
