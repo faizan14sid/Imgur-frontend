@@ -1,24 +1,20 @@
+import React from 'react';
+import './component.css'
 
-import React, {component} from "react";
-import './component.css';
-
-class Search extends component{
-  render(){
-  return (
-    <div className="search">
-    <form action="/" method="get">
-    <label htmlFor="header-search">
-        <span className="visually-hidden"></span>
-    </label>
-    <input
-        type="text"
-        id="header-search"
-        placeholder="Search Images here"
-        name="s" 
-    />
-    <button type="submit" className="btnSearch">Search</button>
-</form>
-</div>
-  )}};
+const Search = () => {
+  return(
+  <form action="/" method="get">
+      <label htmlFor="header-search">
+          <span className="visually-hidden"><h1>Search Images</h1></span>
+      </label>
+      <input
+          type="text"
+          id="header-search"
+          placeholder="Search images here"
+          name="s" 
+      />
+      <button type="submit" className="btnSearch">Search</button>
+  </form>
+)};
 
 export default Search;

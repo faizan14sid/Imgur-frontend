@@ -3,7 +3,7 @@ import './component.css';
 import Login from './Login';
 import Signup from './Signup';
 import {BrowserRouter, Link,Route,Switch } from 'react-router-dom';
-import Search from 'antd/lib/transfer/search';
+import Search from './Search';
 import Uploads from './Uploads';
 import Imgur from './Imgur';
 

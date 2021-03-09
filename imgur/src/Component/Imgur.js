@@ -1,10 +1,12 @@
 import React from 'react'
-import Cards from './Card'
+import Cards from './Cards'
 import './component.css';
 
 const Imgur = () => {
     return (
         <div>
+            <Cards/>
+            <Cards/>
             <Cards/>
         </div>
     )
