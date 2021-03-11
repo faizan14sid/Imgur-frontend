@@ -16,7 +16,7 @@ function Uploads(){
         }
         const renderPhotos= (source)=>{
             return source.map((photo)=>{
-            return <img src={photo} alt={''} key={photo}/>
+            return <img src={photo} alt={""} key={photo}/>
             })
         };
         return (

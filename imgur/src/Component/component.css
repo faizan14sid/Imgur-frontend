@@ -52,7 +52,7 @@
   
   li {
     display:inline-block;
-    padding: 12px;
+    padding: 15px;
   }
   
   li a {
@@ -72,6 +72,29 @@
 .btnSearch{
   background-color: darkorange;
 }
+.btnSearch:hover{
+  cursor: pointer;
+}
 .Card{
   margin-bottom: 10px;
+}
+.imgurlogo{
+  position: relative;
+  right: 180px;
+  font-weight: bolder;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  
+}
+.imgurlogo:hover{
+  color: black;
+  font-size: 220%;
+
+}
+.buttonUpload{
+  background-color: chocolate;
+}
+.buttonUpload:hover{
+  cursor: pointer;
 }

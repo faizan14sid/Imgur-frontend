@@ -15,8 +15,8 @@ class Navbar extends React.Component {
             
           <div>
          <ul>
-         <li><Link to="/"><h1 style={{color:"white",position:"relative",left:"-200px"}}>IMGUR</h1></Link></li>
-         <li><Link to="/upload">UPLOAD</Link></li>
+         <li> <Link className="imgurlogo" to="/">IMGUR</Link></li>
+         <li><Link to="/upload"><button className="buttonUpload">Upload images</button></Link></li>
          <li><Link to="/search">SEARCH</Link></li>
          <li><Link to="/login">LOGIN</Link></li>
          <li><Link to="/sign-up">SIGNUP</Link></li>
