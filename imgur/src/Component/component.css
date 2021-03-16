@@ -98,3 +98,52 @@
 .buttonUpload:hover{
   cursor: pointer;
 }
+.search{
+  text-align: center;
+  margin: auto;
+  padding-top: 20px;
+}
+.search-bar input{
+  width: 300px;
+  border-width: 3px;
+  border-color: darkorange;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 2px black ;
+}
+.search-bar button{
+  width: 80px;
+  border-radius: 8px;
+  margin-left: 20px;
+  background-color: darkorange;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(60, 61, 63);
+  cursor: pointer;
+}
+.gallery{
+  margin-top: 20px;
+  width: 100%;
+}
+.photos{
+  display: inline-block;
+}
+.photos img{
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+.photos-container{
+  margin-top: 50px
+}
+.Imgur-photos{
+  display: inline-block;
+}
+.image{
+  height: 200px;
+  width:200px;
+  margin: 10px;
+}
+.details{
+  background-color: orange;
+
+}
