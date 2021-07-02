@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/imgur-frontend/static/css/main.6ec9fff6.chunk.css",
+    "main.js": "/imgur-frontend/static/js/main.8f81de26.chunk.js",
+    "main.js.map": "/imgur-frontend/static/js/main.8f81de26.chunk.js.map",
+    "runtime-main.js": "/imgur-frontend/static/js/runtime-main.e44862f6.js",
+    "runtime-main.js.map": "/imgur-frontend/static/js/runtime-main.e44862f6.js.map",
+    "static/css/2.015dc0ab.chunk.css": "/imgur-frontend/static/css/2.015dc0ab.chunk.css",
+    "static/js/2.59e94c87.chunk.js": "/imgur-frontend/static/js/2.59e94c87.chunk.js",
+    "static/js/2.59e94c87.chunk.js.map": "/imgur-frontend/static/js/2.59e94c87.chunk.js.map",
+    "static/js/3.beef11c8.chunk.js": "/imgur-frontend/static/js/3.beef11c8.chunk.js",
+    "static/js/3.beef11c8.chunk.js.map": "/imgur-frontend/static/js/3.beef11c8.chunk.js.map",
+    "index.html": "/imgur-frontend/index.html",
+    "static/css/2.015dc0ab.chunk.css.map": "/imgur-frontend/static/css/2.015dc0ab.chunk.css.map",
+    "static/css/main.6ec9fff6.chunk.css.map": "/imgur-frontend/static/css/main.6ec9fff6.chunk.css.map",
+    "static/js/2.59e94c87.chunk.js.LICENSE.txt": "/imgur-frontend/static/js/2.59e94c87.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e44862f6.js",
+    "static/css/2.015dc0ab.chunk.css",
+    "static/js/2.59e94c87.chunk.js",
+    "static/css/main.6ec9fff6.chunk.css",
+    "static/js/main.8f81de26.chunk.js"
+  ]
+}
